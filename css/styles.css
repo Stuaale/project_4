@@ -407,7 +407,7 @@ a {
 }
 
 .default {
-  background-color: #51ddfc;
+  background-color: #deb2ee;
 }
 
 .error {
@@ -460,7 +460,6 @@ a {
   display: flex;
   flex-direction: column;
 }
-
 .nav-link {
   text-align: center;
   border-radius: 5px;
@@ -469,7 +468,6 @@ a {
   width: 100%;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
-
 .nav-link:hover {
   color: #fff;
   background-color: #58e1c1;
@@ -486,8 +484,7 @@ a {
   max-width: 100%;
   max-height: 100%;
 }
-
-.img-frame {
+.img-avatar-frame {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -496,8 +493,7 @@ a {
   padding: 13px;
   border: 1px solid #ccc;
 }
-
-.img-logo {
+.img-avatar-logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
