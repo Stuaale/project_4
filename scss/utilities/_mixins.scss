@@ -3,13 +3,45 @@
 // =========================================
 
 // Image Styling
-@mixin img {
+@mixin img ($dim:null){
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
-  max-width: 100%;
-  max-height: 100%;
+  max-width: $dim;
+  max-height: $dim;
   @content;
+}
 
+//Center Elements
+
+@mixin center{
+  width: 90%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//Button Elements
+
+@mixin button($brdr: null, $padd: null){
+  margin-top: 15px;
+  width: 100%;
+  color: $white;
+  border: $brdr;
+  padding: $padd;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+//Flex container
+
+@mixin flex(
+  $disp: flex,
+  $dir: null,
+  $wrap: null,
+  $just: null) {
+  display: $disp;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $just;
 }

@@ -80,20 +80,17 @@
 }
 
 .nav {
-  flex-direction: row;
-  justify-content: flex-end;
+  @include flex ($dir:row, $just: flex-end);
   align-items: center;
-}
 
-.nav-link {
+&-link {
   flex-basis: 100px;
 }
 
 .btn {
-  padding: 10px 30px;
-}
+  @include button($padd: 10px 30px);
 
-.btn + .btn {
+& + & {
   margin-left: 10px;
 }
 

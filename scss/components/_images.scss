@@ -3,21 +3,25 @@
 /* ============================================= */
 
 
-.img,{
-  @include img;
+.img{
+  @include img($dim: 100%);
 
-&-frame,
+&-frame
 {
   @include img;
   padding: 13px;
   border: 1px solid #ccc;
+  margin-top: 10px;
+}
 
+&-avatar
+{
+  @include img;
+  margin-top: 10px;
 }
 
 &-logo {
   @include img;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 }
