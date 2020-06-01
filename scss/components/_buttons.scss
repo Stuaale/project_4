@@ -4,10 +4,21 @@
 
 .btn {
   @include button ($brdr:none, $padd:10px 0) ;
+  &:hover {
+    color: $color-text;
+    background-color: lighten($color-btn-1,15%)
+    transition: background-color 1s ease-in;
+  }
+  @media (min-width: $break-m) {
+      & + &{
+        margin-left: 10px;
+    }
+}
 }
 
 .default {
   background-color: $color-btn-1;
+  &:hover {background-color: $color-btn-lighten-1;}
 }
 
 .error {

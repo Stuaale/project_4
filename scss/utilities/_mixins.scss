@@ -15,22 +15,27 @@
 //Center Elements
 
 @mixin center{
-  width: 90%;
-  max-width: 1000px;
+  width: 100%;
+  max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
 }
 
 //Button Elements
 
-@mixin button($brdr: null, $padd: null){
+@mixin button($brdr: null, $padd: null, $marg: null){
   margin-top: 15px;
+  margin-left: $marg;
   width: 100%;
   color: $white;
   border: $brdr;
   padding: $padd;
   text-transform: uppercase;
   border-radius: 5px;
+  @content;
+  @media (min-width: $break-m) {
+    padding: 10px 30px;
+    }
 }
 
 //Flex container
@@ -44,4 +49,5 @@
   flex-direction: $dir;
   flex-wrap: $wrap;
   justify-content: $just;
+  @content;
 }
