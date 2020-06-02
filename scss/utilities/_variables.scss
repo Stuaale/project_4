@@ -14,20 +14,16 @@ $color-btn-3: #e4757a;
 $color-btn-4: #fd7856;
 $color-btn-5: #927bc1;
 
-$color-btn-lighten-1: lighten($color-btn-1, 15%);
-$color-btn-lighten-2: lighten($color-btn-2, 15%);
-$color-btn-lighten-3: lighten($color-btn-3, 15%);
-$color-btn-lighten-4: lighten($color-btn-4, 15%);
-$color-btn-lighten-5: lighten($color-btn-5, 15%);
+$color-btn-lighten-1: lighten($color-btn-1, 20%);
+$color-btn-lighten-2: lighten($color-btn-2, 20%);
+$color-btn-lighten-3: lighten($color-btn-3, 20%);
+$color-btn-lighten-4: lighten($color-btn-4, 20%);
+$color-btn-lighten-5: lighten($color-btn-5, 20%);
 
 $color-text: #777777;
 $color-bg: $white;
 
-//fonts
-
-$font-primary: 'Lato', sans-serif;
 
 
-
-// Media Query Breakpoints
-$break-m: 768px;
+// Media Queries
+$min-width: 786px;

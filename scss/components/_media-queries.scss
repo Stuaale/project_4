@@ -1,15 +1,28 @@
 /* ============================================= */
 /*              Media Queries                    */
 /* ============================================= */
-@media (min-width: $break-m) {
+@media (min-width: 768px) {
 
+.container {
+  max-width: 1400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .centered {
-  @include center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  flex-direction: row;
 }
 
 [class^=col] {
-  @include flex($just:center);
+  display: flex;
+  justify-content: center;
   margin-top: 0;
   align-items: center;
 }
@@ -74,12 +87,16 @@
   flex-basis: 100px;
 }
 
+.btn {
+  @include button($padd: 10px 30px);
 
+& + & {
+  margin-left: 10px;
+}
 
 .logo {
   margin-left: initial;
   margin-right: initial;
-}
 }
 
 }

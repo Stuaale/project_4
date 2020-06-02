@@ -363,10 +363,6 @@ a {
   text-decoration: none;
 }
 
-h4 {
-  font-weight: 300;
-}
-
 /* ============================================= */
 /*              Typography                       */
 /* ============================================= */
@@ -374,7 +370,8 @@ h4 {
   color: #58e1c1;
   margin-left: 10px;
 }
-.headline-primary .headline-secondary {
+.headline-primary-secondary {
+  font-weight: 300;
   color: #777777;
 }
 
@@ -407,31 +404,6 @@ h4 {
   padding: 10px 0;
   text-transform: uppercase;
   border-radius: 5px;
-}
-@media (min-width: 768px) {
-  .btn {
-    padding: 10px 30px;
-  }
-}
-@media (min-width: 768px) {
-  .btn {
-    margin-top: 15px;
-    width: 100%;
-    color: #fff;
-    padding: 10px 30px;
-    text-transform: uppercase;
-    border-radius: 5px;
-  }
-}
-@media (min-width: 768px) and (min-width: 768px) {
-  .btn {
-    padding: 10px 30px;
-  }
-}
-@media (min-width: 768px) {
-  .btn + .btn {
-    margin-left: 10px;
-  }
 }
 
 .default {
@@ -537,24 +509,11 @@ h4 {
 .container {
   padding: 0 10px;
 }
-@media (min-width: 768px) {
-  .container {
-    width: 100%;
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 
 .row {
   display: flex;
   flex-direction: column;
   padding: 1em 10px;
-}
-@media (min-width: 768px) {
-  .row {
-    flex-direction: row;
-  }
 }
 
 [class^=col] {
@@ -621,11 +580,21 @@ h4 {
 /*              Media Queries                    */
 /* ============================================= */
 @media (min-width: 768px) {
-  .centered {
-    width: 100%;
+  .container {
     max-width: 1400px;
+    display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .row {
+    flex-direction: row;
   }
 
   [class^=col] {
@@ -693,10 +662,20 @@ h4 {
     justify-content: flex-end;
     align-items: center;
   }
+
   .nav-link {
     flex-basis: 100px;
   }
-  .nav .logo {
+
+  .btn {
+    padding: 10px 30px;
+  }
+
+  .btn + .btn {
+    margin-left: 10px;
+  }
+
+  .logo {
     margin-left: initial;
     margin-right: initial;
   }
