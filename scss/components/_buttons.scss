@@ -4,6 +4,17 @@
 
 .btn {
   @include button ($brdr:none, $padd:10px 0) ;
+
+  @include mquery ('m') {
+  & {
+    padding: 10px 30px;
+  }
+
+  & + & {
+    margin-left: 10px;
+  }
+
+}
 }
 
 .default {

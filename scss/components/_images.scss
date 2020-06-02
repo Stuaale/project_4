@@ -25,3 +25,10 @@
 }
 
 }
+
+@include mquery ('m') {
+.logo {
+  margin-left: initial;
+  margin-right: initial;
+}
+}

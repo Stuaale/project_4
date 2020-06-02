@@ -363,6 +363,10 @@ a {
   text-decoration: none;
 }
 
+h4 {
+  font-weight: normal;
+}
+
 /* ============================================= */
 /*              Typography                       */
 /* ============================================= */
@@ -370,7 +374,7 @@ a {
   color: #58e1c1;
   margin-left: 10px;
 }
-.headline-primary-secondary {
+.headline-primary .headline-secondary {
   font-weight: 300;
   color: #777777;
 }
@@ -404,6 +408,14 @@ a {
   padding: 10px 0;
   text-transform: uppercase;
   border-radius: 5px;
+}
+@media (min-width: 768px) {
+  .btn {
+    padding: 10px 30px;
+  }
+  .btn + .btn {
+    margin-left: 10px;
+  }
 }
 
 .default {
@@ -472,6 +484,17 @@ a {
   color: #fff;
   background-color: #58e1c1;
 }
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .nav-link {
+    flex-basis: 100px;
+  }
+}
 
 /* ============================================= */
 /*              Images                           */
@@ -503,11 +526,25 @@ a {
   margin-right: auto;
 }
 
+@media (min-width: 768px) {
+  .logo {
+    margin-left: initial;
+    margin-right: initial;
+  }
+}
 /* ============================================= */
 /*              Grid System                      */
 /* ============================================= */
 .container {
   padding: 0 10px;
+}
+@media (min-width: 768px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+    display: block;
+  }
 }
 
 .row {
@@ -515,7 +552,19 @@ a {
   flex-direction: column;
   padding: 1em 10px;
 }
+@media (min-width: 768px) {
+  .row {
+    flex-direction: row;
+  }
+}
 
+@media (min-width: 768px) {
+  .centered {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
 [class^=col] {
   margin-top: 10px;
   flex-basis: 100%;
@@ -576,27 +625,7 @@ a {
   flex-basis: 100%;
 }
 
-/* ============================================= */
-/*              Media Queries                    */
-/* ============================================= */
 @media (min-width: 768px) {
-  .container {
-    max-width: 1400px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .centered {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .row {
-    flex-direction: row;
-  }
-
   [class^=col] {
     display: flex;
     justify-content: center;
@@ -654,30 +683,6 @@ a {
 
   .col-12 {
     flex-basis: 100%;
-  }
-
-  .nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
-  .nav-link {
-    flex-basis: 100px;
-  }
-
-  .btn {
-    padding: 10px 30px;
-  }
-
-  .btn + .btn {
-    margin-left: 10px;
-  }
-
-  .logo {
-    margin-left: initial;
-    margin-right: initial;
   }
 }
 
