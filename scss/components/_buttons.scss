@@ -4,6 +4,7 @@
 
 .btn {
   @include button ($brdr:none, $padd:10px 0) ;
+  transition:background-color 0.3s ease-in-out;
 
   @include mquery ('m') {
   & {
@@ -17,22 +18,6 @@
 }
 }
 
-.default {
-  background-color: $color-btn-1;
-}
-
-.error {
-  background-color: $color-btn-3;
-}
-
-.info {
-  background-color: $color-btn-5;
-}
-
-.success {
-  background-color: $color-btn-2;
-}
-
-.warning {
-  background-color: $color-btn-4;
+.btn{
+@include btn-colors($button-colors);
 }

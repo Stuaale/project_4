@@ -8,26 +8,38 @@ $white: #fff;
 $color-primary: #58e1c1;
 $color-secondary: #51ddfc;
 
-$color-btn-1: #51ddfc;
-$color-btn-2: #63cc82;
-$color-btn-3: #e4757a;
-$color-btn-4: #fd7856;
-$color-btn-5: #927bc1;
-
-$color-btn-lighten-1: lighten($color-btn-1, 15%);
-$color-btn-lighten-2: lighten($color-btn-2, 15%);
-$color-btn-lighten-3: lighten($color-btn-3, 15%);
-$color-btn-lighten-4: lighten($color-btn-4, 15%);
-$color-btn-lighten-5: lighten($color-btn-5, 15%);
-
 $color-text: #777777;
 $color-bg: $white;
+
+//Button Colors
+
+$button-colors:(
+'default': #51ddfc,
+'success': #63cc82,
+'error': #e4757a,
+'warning': #fd7856,
+'info': #927bc1,
+);
+
+//lighten-colors
+
+$lighten-colors:(
+'default': lighten(#51ddfc, 15%),
+'success': lighten(#63cc82, 15%),
+'error': lighten(#e4757a, 15%),
+'warning': lighten(#fd7856, 15%),
+'info': lighten(#927bc1, 15%),
+);
+
+
 
 //fonts
 
 $font-primary: 'Lato', sans-serif;
 
 
-
 // Media Query Breakpoints
-$break-m: 768px;
+
+$breakpoints:(
+'m': 768px,
+);

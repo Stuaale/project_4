@@ -51,9 +51,24 @@
 
 // Media Queries
 @mixin mquery ($break) {
-  @if $break == 'm' {
-    @media (min-width: $break-m) {
+  $value: map-get($breakpoints, $break);
+  $m: map-get($breakpoints, 'm');
+
+  @if $value == $m {
+    @media (min-width: $value) {
       @content;
     }
   }
+}
+
+//Button Colors
+@mixin btn-colors($map){
+@each $button-colors, $color in $map {
+  &-#{$button-colors} {
+     background-color: $color;
+  &:hover{
+     background-color: lighten($color,15%);
+  }
+}
+}
 }
